@@ -1,0 +1,172 @@
+<html>
+
+<head>
+    <title> contact page </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+</head>
+<style>
+    /* CSS for styling the navigation menu */
+    nav {
+        background-color: #a7a4a1;
+        color: rgb(7, 6, 6);
+        border-radius: 5px;
+        padding: 10px;
+    }
+
+    nav a {
+        color: rgb(31, 26, 26);
+        text-decoration: none;
+        transition: ease-in-out 0.1s;
+
+    }
+
+    nav a:hover {
+        text-decoration: underline;
+        color: #a5a29d;
+        background-color: #343533f3;
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+    @media screen and (min-width:0px) and (max-width:768px) {
+        body {
+            background-image: url("p.jpg");
+            background-color: rgb(8, 8, 7);
+            background-size: cover;
+        }
+    }
+
+    @media Screen and (min-width:768px) and (max-width:1024px) {
+        body {
+            background-image: url("c.jpg");
+            background-size: cover;
+        }
+    }
+
+    @media Screen and (min-width:1024px)and (max-width:1224px) {
+        body {
+            background-color: rgb(16, 17, 16);
+            background-image: url("r3.jpg.JPG");
+            background-size: cover;
+        }
+    }
+
+    @media Screen and (min-width:1224px) and (max-width:2024px) {
+        body {
+            background-color: rgb(16, 16, 17);
+            background-size: cover;
+            background-image: url("r2.jpg.JPG");
+        }
+    }
+
+    body {
+        font-family: "Poppins";
+        font-style: "Poppins";
+        color: aliceblue;
+        background-size: cover;
+        text-decoration: none;
+    }
+
+    h1 {
+        color: #f3ebeb;
+        text-shadow: 3px 0px #302f2f;
+    }
+
+    a {
+        color: #0d0909;
+    }
+
+    button {
+        background-image: linear-gradient(to right, #b2afb9b6 0%, #84847d 51%, #5a616d 100%);
+        margin: 10px;
+        padding: 15px 45px;
+        text-align: center;
+        text-transform: uppercase;
+        transition: 0.5s;
+        background-size: 200% auto;
+        color: rgb(18, 21, 21);
+        box-shadow: 0 0 20px #756f6f;
+        border-radius: 10px;
+        display: block;
+    }
+
+    button:hover {
+        background-position: right center;
+        /* change the direction of the change here */
+        color: #161414;
+        text-decoration: none;
+    }
+    marquee {
+        background: #aaa2a2;
+        color: rgb(21, 22, 23);
+        border-radius: 5px;
+    }
+</style>
+<script>
+    function loginValidaton(){
+        var username = document.myform.uname.value;
+        var phonenumber =document.myform.number.value;
+        var Email =document.myform.name.value;
+        if(username==null || username=="" || username.length<5) {
+           alert("Name cant be blank")
+           return false;  
+        }
+        if(phonenumber.length<10) { 
+           alert("valid phonenumber must be entered");
+           return false;  
+        }
+        if(Email==null || Email==""||atposition<1 || dotposition<atposition+2 || dotposition+2>=myemail.length) {
+           alert("Please enter a valid e-mail address")
+           return false;
+        }
+        return true;
+    }
+</script>
+<body>
+    <img style="position: absolute; padding: 2px;padding-left: 5px;" src="IT.PNG" alt="logo" width="40px"
+        height="40px">
+
+    <body link="white">
+        <nav>
+            <div>
+                <a style="margin-right: 5px;margin-left: 50px" href="#">Login Page
+                </a>
+                <a>|</a>
+                <a style="margin-right:5px;" href="./resc.html">Registretion page</a>
+                <a>|</a>
+                <a style="margin-right: 5px;" href="./loginsuccess.html">loginsuccess Page</a>
+                <a>|</a>
+                <a style="margin-right: 5px;" href=".//contact.html">Contact Us</a>
+                <a>|</a>
+            </div>
+        </nav>
+    </body><br>
+    <marquee behavior="layout" direction="left">we gadly welcome to the Website. the Serivceswe provide hopely very
+        usefully to you and the Website all about the IT Company serivces</marquee>
+
+    <body>
+        <h3> contact page:</h3>
+        <form name="myform" onsubmit="return loginValidaton(this)" action="contact.html">
+            username:<input type="text" name="uname" placeholder=" Name"> <br>
+            phonenumber:<input type="int" name="number" pattern="[0-9]{10}" title=" enter the ten digits number" placeholder="Number"><br>
+            Email:<input type="email" input list="Email" name="name" placeholder="The Email"><br>
+            <textarea name="mytext" cols="35" rows="45">
+            message here....
+        </textarea>
+            <datalist id="Email">
+                <option value="ram@gamil.com"></option>
+                <option value="tp.reddy@yahoo.com"></option>
+                <option value="pratap@hotmail.com"></option>
+                <option value="thummapratapreddy123@gmail.com"></option>
+
+            </datalist>
+            <button type="submit" style="color: black;"> submit</button>
+        </form>
+    </body>
+
+</html>

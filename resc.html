@@ -1,0 +1,151 @@
+<html>
+<head>
+<title> registration page </title><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+</head>
+<style>
+    /* CSS for styling the navigation menu */
+    nav {
+        background-color: #a7a4a1;
+        color: rgb(23, 21, 21);
+        border-radius: 5px;
+        padding: 10px;
+    }
+    nav  a {
+        color: rgb(15, 12, 12);
+        text-decoration: none;
+        transition: ease-in-out 0.1s;
+
+    }
+    nav a:hover {
+        text-decoration: underline;
+        color: #a5a29d;
+        background-color: #343533f3;
+        padding:5px;
+        border-radius: 5px;    }
+    @media screen and (min-width:0px) and (max-width:768px){
+        body {
+            background-image: url("p.jpg");
+            background-color: rgb(8, 8, 7);
+            background-size: cover;
+        }
+    }   
+
+    @media Screen and (min-width:768px) and (max-width:1024px){
+        body {
+                 background-image: url("c.jpg");
+                 background-size: cover;
+                }
+            }
+    @media Screen and (min-width:1024px)and (max-width:1224px) {
+        body {    background-color: rgb(16, 17, 16);
+            background-image: url("r3.jpg.JPG");
+            background-size: cover;
+           }
+        }
+    @media Screen and (min-width:1224px) and (max-width:2024px){
+        body { 
+                background-color: rgb(16, 16, 17);
+                background-size: cover;
+                background-image: url("r2.jpg.JPG");
+             }
+            }
+    body {
+        font-style:oblique;
+        color: aliceblue;
+        background-size: cover;
+        font-family:  "Poppins";
+
+        text-decoration: none;
+     }
+     h1{
+        color: #f4ecec;
+        text-shadow: 3px 0px #302f2f;
+     }a{
+            color: #0e0b0b;
+         }
+     button {
+            background-image: linear-gradient(to right, #b2afb9b6 0%, #84847d  51%, #5a616d  100%);
+            margin: 10px;
+            padding: 15px 45px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: rgb(18, 21, 21);            
+            box-shadow: 0 0 20px #756f6f;
+            border-radius: 10px;
+            display: block;
+          }
+
+          button:hover {
+            background-position: right center; /* change the direction of the change here */
+            color: #161414;
+            text-decoration: none;
+          }
+          marquee{ background: #aaa2a2;
+            color: rgb(15, 18, 21);
+            border-radius: 5px;
+         }
+</style>
+<script>
+    function loginvalidaton() {
+        var Mothername = document.myform.tname.value;
+        var Fathername=document.myform.name.value;
+        var BIRTHDAY=document.myform.date.value;
+        var Gender=document.myform.letter.value;
+        var Address=document.myform.place.value;
+        if(Mothername==null || Mothername=="" ) {
+           alert(" mother Name cant be blank")
+           return false;  
+        }
+        if(Fathername==null || Fathername=="" ) { 
+           alert("father name  must be entered")
+           return false;  
+        }
+        if(BIRTHDAY==null || BIRTHDAY=="" ) {
+           alert("brithday must be enterd")
+           return false;
+        }
+        if(Gender==null || Gender=="" ) {
+           alert("Gender must be enterd")
+           return false;
+        }
+        if(Address==null || Address=="" ) {
+           alert("Address must be enterd")
+           return false;
+        }
+}
+</script>
+<img style="position: absolute; padding: 2px;padding-left: 5px;" src="IT.PNG" alt="logo" width="40px" height="40px">
+<body  link="white"><nav>
+    <div>
+       <a style="margin-right: 5px;margin-left: 50px"href="#">Login Page</a>
+            <a>|</a>
+            <a style="margin-right: 5px;margin-left: 50px"href="./resc.html" >Registretion page</a>
+            <a>|</a>
+            <a style="margin-right: 5px;"href="./loginsuccess.html">loginsuccess Page</a>
+            <a>|</a>
+            <a style="margin-right: 5px;"href=".//contact.html">Contact Us</a>
+            <a>|</a>
+     </div > 
+     </nav>
+</body><br>
+<marquee behavior="layout" direction="left" >we gadly welcome to the Website. the Serivceswe provide hopely very usefully to you and the Website all about the IT Company serivces</marquee>
+<body>
+   <form name="myform" onsubmit="return loginvalidaton(this)" action="loginsuccess.html">
+<h3> Registretion Page </h3>
+        Mother name: <input type="text" name="tname" placeholder="Mother name"><br>
+        Father name: <input type="text" name="name" placeholder="Father name"><br>
+        BIRTHDAY: <input type="date" name="date" placeholder="DATE OF BIRTHDAY"><br>
+Gender:<br>
+<input type="radio" name="letter" placeholder="">Female<br>
+<input type="radio" name="letter" placeholder="">Male<br>
+<input type="radio" name="letter" placeholder="">Other<br>
+        Address: <input type="text" name="place" placeholder=""><br>
+        <button type="submit" style="color: #161414;" >submit</button>
+   </form>
+ </body>
+</html>

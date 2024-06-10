@@ -1,0 +1,22 @@
+<script>
+    function loginValidaton() {
+        var username = document.myform.tname.value;
+        var phonenumber =document.myform.number.value;
+        var Email =document.myform.name.value;
+        var atposition =myemail.indexOf("@");  
+        var dotposition =myemail.lastIndexOf(".");  
+        if(username==null || username=="" || username.length<5) {
+           alert("Name cant be blank")
+           return false;  
+        }
+        if(phonenumber.length<10) { 
+           alert("valid phonenumber must be entered");
+           return false;  
+        }
+        if(Email==null || Email==""||atposition<1 || dotposition<atposition+2 || dotposition+2>=myemail.length) {
+           alert("Please enter a valid e-mail address")
+           return false;
+        }
+}
+</script>
+<form name="myform" method="post" onsubmit="return loginValidaton(this)" action="./contact.html">
